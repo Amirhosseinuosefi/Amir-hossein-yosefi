@@ -2,18 +2,18 @@
 import random
 
 def guess_number():
-    # تولید عدد تصادفی
+  
     number = random.randint(1, 10)
     print('عدد بین ۱ تا ۱۰ تولید شد. باشد با حدس انتخابی خود مطابقت دارد یا نه؟')
 
-    # تعداد حدس‌های صحیح
+    
     correct_guesses = 0
 
-    # شروع حلقه
+    
     while True:
         user_guess = int(input('حدس خود را بدهید: '))
 
-        # بررسی صحت حدس
+        
         if user_guess == number:
             correct_guesses += 1
             print(f'تبریک می‌گویم! شما برنده شدید. تعداد حدس‌های صحیح: {correct_guesses}')
@@ -31,50 +31,50 @@ def print_stars(num):
     for i in range(num):
         print('*' * (i + 1))
 
-# ورودی از کاربر گرفته می‌شود
+
 user_number = int(input('لطفاً یک عدد وارد کنید: '))
 
-# تابع چاپ ستاره‌ها فراخوانی می‌شود
+
 print_stars(user_number)
 
 
 #3
-# اندازه جدول ضرب را وارد کنید
+
 size = int(input("لطفاً اندازه جدول ضرب را وارد کنید: "))
 
-# حلقه برای رفتن از 1 تا size
+
 for i in range(1, size + 1):
-    # حلقه دیگر برای رفتن از 1 تا size برای هر i
+    
     for j in range(1, size + 1):
-        # چاپ ضرب i و j
+       
         print(i * j, end='\t')
-    # رفتن به خط بعدی برای راحتی خواندن
+    
     print()
 
 $4
-# عدد را از کاربر دریافت کنید
+
 number = int(input("لطفاً یک عدد وارد کنید: "))
 
-# متغیر برای ذخیره مجموع ارقام
+
 sum_of_digits = 0
 
 # متغیر برای شمارش تعداد رقم‌ها
 digit_count = 0
 
-# حلقه برای محاسبه مجموع ارقام و تعداد رقم‌ها
+
 while number > 0:
-    # یافتن رقم آخرین عدد
+    
     digit = number % 10
     
-    # افزودن رقم به مجموع ارقام
+    
     sum_of_digits += digit
     
-    # کاهش عدد به حذف رقم آخر
+   
     number //= 10
     
-    # افزایش تعداد رقم‌ها
+    
     digit_count += 1
 
-# چاپ مجموع ارقام و تعداد رقم‌ها
+
 print("مجموع ارقام:", sum_of_digits)
 print("تعداد رقم‌ها:", digit_count)
